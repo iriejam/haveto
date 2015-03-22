@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @haveto_list.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @haveto_list.description %>
+</p>
+
+<%= link_to 'Edit', edit_haveto_list_path(@haveto_list) %> |
+<%= link_to 'Back', haveto_lists_path %>

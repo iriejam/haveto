@@ -1,0 +1,29 @@
+<h1>Listing haveto_lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @haveto_lists.each do |haveto_list| %>
+      <tr>
+        <td><%= haveto_list.title %></td>
+        <td><%= haveto_list.description %></td>
+        <td><%= link_to 'Show', haveto_list %></td>
+        <td><%= link_to 'Edit', edit_haveto_list_path(haveto_list) %></td>
+        <td><%= link_to 'Destroy', haveto_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Haveto list', new_haveto_list_path %>
